@@ -1,0 +1,69 @@
+@import "./navigation/navigation.scss";
+
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  padding: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  box-sizing: border-box;
+
+  &.transparent {
+    background-color: transparent;
+  }
+}
+
+.searchbar-wrapper {
+  padding: 6px 60px 6px 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid $text-color;
+  border-radius: 40px;
+}
+
+.searchbar-input {
+  outline: 0;
+  border: 0;
+  width: 100%;
+  background-color: transparent;
+  color: $text-color;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.account-link {
+  i {
+    font-size: 18px;
+  }
+  span {
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+}
+
+.shopping-cart {
+  margin-left: 30px;
+  i {
+    font-size: 18px;
+  }
+  span {
+    position: relative;
+    background-color: $icon-background;
+    border-radius: 4px;
+    padding: 0px 3px 1px 2px;
+    color: white;
+    font-size: 12px;
+    top: -14px;
+    right: 6px;
+  }
+}
+
+img {
+  object-fit: contain;
+}

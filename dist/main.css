@@ -1,0 +1,78 @@
+body {
+  background-color: green;
+  margin: 0;
+}
+
+.navigation-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+.navigation-list li {
+  padding-right: 30px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown .dropdown-button {
+  border: 0;
+  background-color: white;
+}
+.dropdown .dropdown-button:hover,
+.dropdown .dropdown-button :focus {
+  background-color: #f6d524;
+  color: white;
+  cursor: pointer;
+}
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown.show .dropdown-content {
+  display: block;
+}
+.dropdown.show .dropdown-button {
+  background-color: #f6d524;
+  color: white;
+  cursor: pointer;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  padding: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-searchbar {
+  padding: 8px 10px;
+  border-radius: 40px;
+  width: 100%;
+}
+
+img {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.hero {
+  background-image: "assets/hero_image.png";
+}
+
+/*# sourceMappingURL=main.css.map*/

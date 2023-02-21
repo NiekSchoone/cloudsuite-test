@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: "Roboto";
+}
+
+$button-color: #f6d524;
+$text-color: #4b4b4b;
+$icon-background: #e56041;
+
+i,
+a,
+span {
+  color: $text-color;
+}
+
+.flex {
+  display: flex;
+}
+
+@import "styles/header/header";
+@import "styles/hero/hero";
