@@ -1,6 +1,16 @@
 body {
-  background-color: green;
   margin: 0;
+  font-family: "Roboto";
+}
+
+i,
+a,
+span {
+  color: #4b4b4b;
+}
+
+.flex {
+  display: flex;
 }
 
 .navigation-list {
@@ -8,9 +18,16 @@ body {
   padding: 0;
   display: flex;
   flex-direction: row;
+  align-items: baseline;
 }
 .navigation-list li {
   padding-right: 30px;
+}
+.navigation-list a {
+  color: #4b4b4b;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
 }
 
 .dropdown {
@@ -19,13 +36,28 @@ body {
 }
 .dropdown .dropdown-button {
   border: 0;
-  background-color: white;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4b4b4b;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+}
+.dropdown .dropdown-button i {
+  font-size: 14px;
+  margin-left: 5px;
 }
 .dropdown .dropdown-button:hover,
 .dropdown .dropdown-button :focus {
   background-color: #f6d524;
   color: white;
   cursor: pointer;
+  border-radius: 100px;
+}
+.dropdown .dropdown-button:hover i,
+.dropdown .dropdown-button :focus i {
+  color: white;
 }
 .dropdown .dropdown-content {
   display: none;
@@ -49,30 +81,116 @@ body {
   background-color: #f6d524;
   color: white;
   cursor: pointer;
+  border-radius: 100px;
+}
+.dropdown.show .dropdown-button i {
+  color: white;
+  transform: rotate(0.5turn);
 }
 
 header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
   background-color: white;
   display: flex;
   padding: 30px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-top: auto;
+  box-sizing: border-box;
+}
+header.transparent {
+  background-color: transparent;
 }
 
-.input-searchbar {
-  padding: 8px 10px;
+.searchbar-wrapper {
+  padding: 6px 60px 6px 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #4b4b4b;
   border-radius: 40px;
+}
+
+.searchbar-input {
+  outline: 0;
+  border: 0;
   width: 100%;
+  background-color: transparent;
+  color: #4b4b4b;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.account-link i {
+  font-size: 18px;
+}
+.account-link span {
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.shopping-cart {
+  margin-left: 30px;
+}
+.shopping-cart i {
+  font-size: 18px;
+}
+.shopping-cart span {
+  position: relative;
+  background-color: #e56041;
+  border-radius: 4px;
+  padding: 0px 3px 1px 2px;
+  color: white;
+  font-size: 12px;
+  top: -14px;
+  right: 6px;
 }
 
 img {
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 
 .hero {
-  background-image: "assets/hero_image.png";
+  width: 100%;
+  position: relative;
+}
+.hero .hero-content {
+  position: absolute;
+  top: 300px;
+  width: 660px;
+  left: 180px;
+}
+.hero .hero-content h1 {
+  font-family: "Gochi Hand", sans-serif;
+  font-size: 78px;
+  color: white;
+}
+.hero .parallax-img-container {
+  overflow: hidden;
+}
+.hero .parallax-img-container::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(131, 182, 210, 0.7803921569);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.button-cta {
+  background-color: #f6d524;
+  border: 0;
+  border-radius: 100px;
+  padding: 18px 40px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map*/
