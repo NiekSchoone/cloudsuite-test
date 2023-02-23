@@ -4,7 +4,7 @@ function createDropdownEffect(button) {
     listItem.classList.toggle("show");
   };
 
-  button.onClick = drop;
+  button.onclick = drop;
 }
 
 export default createDropdownEffect;

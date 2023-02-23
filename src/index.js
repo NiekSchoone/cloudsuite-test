@@ -1,10 +1,8 @@
-import createParallaxScroll from './scripts/hero/parallax';
 import createDropdownEffect from './scripts/header/dropdown';
+import createParallaxScroll from './scripts/hero/parallax';
 
 window.onload = () => {
-
-  createParallaxScroll(".parallax-img", 0.4);
-
+  console.log("onload");
   const dropdownButtons = document.getElementsByClassName("dropdown-button");
 
   for (let i = 0; i < dropdownButtons.length; i++) {
@@ -12,8 +10,10 @@ window.onload = () => {
     createDropdownEffect(element);
   }
 
+  createParallaxScroll(".parallax-img", 0.4);
+
   const header = document.querySelector("header");
-  
+
   window.onscroll = () => {
     const distance = window.scrollY;
   
@@ -22,6 +22,7 @@ window.onload = () => {
     } else {
       header.classList.remove("transparent");
     }
+
   };
 
   window.onclick = (e) => {
